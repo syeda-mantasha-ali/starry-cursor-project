@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+}
+
+h1 {
+    color: hotpink;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+i {
+    color: #1ceb6b;
+    font-size: larger;
+}
+
+span {
+    position: absolute;
+    pointer-events: none;
+}
+
+span::before {
+    content: "\f005";
+    position: absolute;
+    font-family: 'FontAwesome';
+    color: #1eeb6d;
+    animation: moveShape 1s linear forwards;
+}
+
+@keyframes moveShape {
+    0% {
+        transform: translate(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20%,
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(300px) rotate(360deg);
+        opacity: 0;
+    }
+}
